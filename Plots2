@@ -1,0 +1,24 @@
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+def make_plots(data, numeric_col_1, numeric_col_2, categorical_col):
+    # Set the default figure size
+    sns.set(rc={'figure.figsize':(11, 4)})
+
+    # Make a histogram of a numeric column
+    sns.histplot(data=data, x=numeric_col_1)
+    plt.show()
+
+    # Make a boxplot of a numeric column by a categorical column
+    sns.boxplot(data=data, x=categorical_col, y=numeric_col_1)
+    plt.show()
+
+    # Make a scatterplot of two numeric columns
+    sns.scatterplot(data=data, x=numeric_col_1, y=numeric_col_2)
+    plt.show()
+
+    # Make a barplot of a numeric column by a categorical column
+    sns.barplot(data=data, x=categorical_col, y=numeric_col_2)
+    plt.show()
+
+This function takes a dataframe and three column names as input and creates a histogram, boxplot, scatterplot, and barplot using the Seaborn library. It uses the histplot function to make a histogram of the first numeric column, the boxplot function to make a boxplot of the first numeric column by the categorical column, the scatterplot function to make a scatterplot of the two numeric columns, and the barplot function to make a barplot of the second numeric column by the categ
